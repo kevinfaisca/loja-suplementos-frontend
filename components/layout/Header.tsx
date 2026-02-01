@@ -16,10 +16,10 @@ export function Header(){
                 <Link href="/" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
                     Home
                 </Link>
-                <Link href="/produtos" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+                <Link href="/products" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
                     Produtos
                 </Link>
-                <Link href="/sobre" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+                <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
                     Sobre
                 </Link>
             </nav>

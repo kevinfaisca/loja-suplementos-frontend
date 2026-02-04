@@ -27,7 +27,7 @@ export function HeroSection(){
                             Ver produtos
                         </Button>
 
-                        <Button size="lg" variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800">
+                        <Button size="lg" variant="outline" className="border-zinc-700 text-white bg-black hover:bg-zinc-800">
                             Promoções
                         </Button>
                     </div>

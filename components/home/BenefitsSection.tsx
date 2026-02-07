@@ -16,7 +16,7 @@ export function BenefitsSection(){
 
     return(
         <section className="mx-auto max-w-7xl px-6 py-20">
-            <div className="grid gap md:grid-cols-3">
+            <div className="grid gap md:grid-cols-3 space-x-1">
                 {benefits.map((item) =>(
                     <div key={item.title} className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 hover:border-green-500/40 transition">
                         <h3 className="text-lg font-semibold mb-2"> 

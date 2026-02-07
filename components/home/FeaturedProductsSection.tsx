@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { featuredProducts } from "@/lib/data/featured-products"
 
 export function FeaturedProductsSection(){
     return(
@@ -14,15 +15,18 @@ export function FeaturedProductsSection(){
             </div>
 
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {[1,2,3,4].map((id) => (
-                    <div key={id} className="group relative rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden hover:border-green-500/40 transition">
-                        <span className="absolute top-3 left-3 z-10 rounded-full bg-green-500 px-3 py-1 text-xs font-bold text-black">
-                            Promoção
-                        </span>
+                {featuredProducts.map((product) => (
+                    <div key={product.id} className="group relative rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden hover:border-green-500/40 transition">
+                        {product.isOnSale &&(
+                            <span className="absolute top-3 left-3 z-10 rounded-full bg-green-500 px-3 py-1 text-xs font-bold text-black">
+                                Promoção
+                            </span>
+                        )}
+
                         <div className="relative h-48 bg-zinc-950 flex items-center justify-center">
                             <Image
-                                src="/images/wheyprotein.png"
-                                alt="Produto"
+                                src={product.image}
+                                alt={product.name}
                                 width={160}
                                 height={160}
                                 className="transition-transform duration-500 group-hover:scale-110"
@@ -30,14 +34,14 @@ export function FeaturedProductsSection(){
                         </div>
                         <div className="p-4 space-y-2">
                             <h3 className="font-semibold">
-                                Whey Protein 900g
+                                {product.name}
                             </h3>
                             <p className="text-sm text-zinc-400">
-                                Crescimento e recuperação muscular
+                                {product.description}
                             </p>
                             <div className="flex items-center justify-between pt-2">
                                 <span className="text-lg font-bold text-green-400">
-                                    R$129,90
+                                    R${product.price.toFixed(2)}
                                 </span>
                                 <Button size="sm" className="bg-green-500 hover:bg-green-600 text-black">
                                     Comprar

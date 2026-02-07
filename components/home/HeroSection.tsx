@@ -32,18 +32,6 @@ export function HeroSection(){
                         </Button>
                     </div>
                 </div>
-                <div className="relative group">
-                    <div className="absolute -inset-6 bg-green-500/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition">
-                        <Image
-                            src="/images/wheyprotein.png"
-                            alt="Whey Protein"
-                            width={420}
-                            height={420}
-                            priority
-                            className="relative mx-auto transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
-                </div>
             </div>
         </section>
     )

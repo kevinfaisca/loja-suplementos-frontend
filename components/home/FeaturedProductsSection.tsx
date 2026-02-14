@@ -25,7 +25,7 @@ export function FeaturedProductsSection(){
 
                         <div className="relative h-48 bg-zinc-950 flex items-center justify-center">
                             <Image
-                                src={product.image}
+                                src={product.image[0]}
                                 alt={product.name}
                                 width={160}
                                 height={160}

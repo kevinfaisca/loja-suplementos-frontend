@@ -6,6 +6,7 @@ export type FeaturedProduct = {
     image: string[]
     isOnSale: boolean
     category: string
+    slug: string
 }
 
 export const featuredProducts: FeaturedProduct[]=[
@@ -19,7 +20,8 @@ export const featuredProducts: FeaturedProduct[]=[
       "/images/tabela-nutricional-whey.png",
     ],
     isOnSale: true,
-    category: "whey"
+    category: "whey",
+    slug: "whey-protein-concentrado"
   },
   {
     id: "2",
@@ -31,7 +33,8 @@ export const featuredProducts: FeaturedProduct[]=[
       "/images/tabela-nutricional-creatina.png",
     ],
     isOnSale: false,
-    category: "creatina"
+    category: "creatina",
+    slug: "creatina-monohidratada"
   },
   {
     id: "3",
@@ -43,7 +46,8 @@ export const featuredProducts: FeaturedProduct[]=[
       "/images/tabela-nutricional-pretreino.png",
     ],
     isOnSale: true,
-    category: "pre-treino"
+    category: "pre-treino",
+    slug: "pre-treino-insane"
   }
 
 ]

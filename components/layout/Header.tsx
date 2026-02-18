@@ -4,14 +4,17 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CategoriesSection } from "@/components/home/CategoriesSection" 
 import { Icon } from "@/components/icons/icon"
+import { SearchAutocomplete } from "@/components/search/SearchAutocomplete"
 
 export function Header(){
     return (
         <header className="sticky top-0 z-50 bg-white">
             <div className="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
                 <Link href="/" className="text-xl font-bold">SuppsStore</Link>
-                <div className="flex-1 mx-8">
-                    <input type="text" placeholder="O que você está procurando?" className="w-full rounded-md border border-zinc-300 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"/>
+                <div className="flex flex-1 justify-center mx-8">
+                    <div className="w-full max-w-xl">
+                        <SearchAutocomplete/>
+                    </div>
                 </div>
                 <div className="flex items-center gap-4">
                     <Button variant="outline">Entrar</Button>
